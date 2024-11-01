@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+$general-font: "Montserrat", sans-serif;
+$brand-1: #1976D2;
+$brand-2: #FF1744;
+$brand-3: #212121;
+
+@mixin centralizar(){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.button-exibe{
+    background-color: $brand-1;
+}
+
+.button-reset{
+    background-color: $brand-2;
+}
+
+.error{
+    display: none;
+    color: #FF1744;
+    font-size: 15px;
+}
+
+main{
+    background-image: url('../images/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    @include centralizar();
+    font-family: $general-font;
+    color: $brand-3;
+    
+    .section-hero{
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        font-size: 25px;
+
+        .hero-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background-color: #fff;
+            padding:20px;
+            border-radius: 30px;
+
+            h2{
+                padding: 20px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+    
+            .celula-control{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                input{
+                    padding: 10px;
+                    width: 30vw;
+                    border-radius: 20px;
+                }
+            }
+
+            .buttons-container{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 10px;
+                gap: 10px;
+
+                button{
+                    padding: 10px;
+                    border-radius: 20px;
+                    font-size: 15px;
+                    width: 15vw;
+                    border: none;
+                    font-weight: bolder;
+                    color: #fff;
+                }
+            }
+        }
+
+        #results{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

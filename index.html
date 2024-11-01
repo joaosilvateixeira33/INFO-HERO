@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info Hero</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+    <main>
+        <section class="section-hero">
+            <div class="hero-content">
+                <h2>Guia de Patente</h2>
+                <div class="celula-control">
+                    <label for="name">Nome do heroi:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="celula-control">
+                    <label for="xp">Experiencia Atual(XP):</label>
+                    <input type="text" name="xp" id="xp" required>
+                </div>
+                <span class="error" id="message"></span>
+                <div class="buttons-container">
+                    <button class="button-exibe" onclick="handleExibe()" id="exibe">Exibir medalha</button>
+                    <button class="button-reset" onclick="handleReset()" id="reset">Resetar</button>
+                </div>
+            </div>
+            <div id="result">
+                
+            </div>
+        </section>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
